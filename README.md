@@ -1,4 +1,4 @@
-pickerExplorer
-==============
+Picker Explorer
+===============
 
-Eclipse UI for pickering elements
+Eclipse UI for pickering elements, based on TOPCASED Iterators feature
