@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.topcased.pickerexplorer.batch/src"
+    editDirectory="/org.topcased.pickerexplorer.batch/src" editorDirectory="/org.topcased.pickerexplorer.batch/src"
+    modelPluginID="org.topcased.pickerexplorer.batch" redirection="" modelName="Pickerbatch"
+    testsDirectory="" testSuiteClass="" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" testsPluginID="org.topcased.pickerexplorer.batch.tests">
+  <foreignModel>pickerbatch.ecore</foreignModel>
+  <genPackages prefix="Pickerbatch" basePackage="org.topcased.pickerexplorer.batch"
+      disposableProviderFactory="true" ecorePackage="pickerbatch.ecore#/">
+    <genClasses ecoreClass="pickerbatch.ecore#//PickerBatchMappings">
+      <genFeatures notify="false" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference pickerbatch.ecore#//PickerBatchMappings/mappings"/>
+    </genClasses>
+    <genClasses ecoreClass="pickerbatch.ecore#//Mapping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pickerbatch.ecore#//Mapping/eObject"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pickerbatch.ecore#//Mapping/pickers"/>
+    </genClasses>
+    <genClasses ecoreClass="pickerbatch.ecore#//Picker">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pickerbatch.ecore#//Picker/pickerId"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

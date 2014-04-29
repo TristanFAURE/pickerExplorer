@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+<copyright>
+Copyright (c) 2014 Atos.
+
+     
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+</copyright>
+
+ $Id$
+-->
+<plugin>
+   <extension-point id="registeredPicker" name="Registered Picker" schema="schema/org.topcased.pickerexplorer.ui.registeredPicker.exsd"/>
+   <extension-point id="settransformer" name="Set Transformer" schema="schema/org.topcased.pickerexplorer.ui.setTransformer.exsd"/>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="Picker Explorer View"
+            icon="icons/problem_category.gif"
+            class="org.topcased.pickerexplorer.ui.views.PickerExplorerView"
+            id="pickerexplorer.ui.views.PickerExplorerView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="pickerexplorer.ui.commands.addtopickerexplorer"
+            name="Add to Picker Explorer">
+      </command>
+      <command
+            id="pickerexplorer.ui.commands.showallreferences"
+            name="Show all references">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.topcased.pickerexplorer.ui.handlers.AddToPickerExplorerHandler"
+            commandId="pickerexplorer.ui.commands.addtopickerexplorer">
+         <enabledWhen>
+            <with
+                  variable="selection">
+               <test
+                     property="pickerexplorer.ui.isAdaptableToEObject">
+               </test>
+            </with>
+         </enabledWhen>
+      </handler>
+      <handler
+            class="org.topcased.pickerexplorer.ui.handlers.ShowAllReferencesHandler"
+            commandId="pickerexplorer.ui.commands.showallreferences">
+         <enabledWhen>
+            <with
+                  variable="selection">
+               <test
+                     property="pickerexplorer.ui.isAdaptableToEObject">
+               </test>
+            </with>
+         </enabledWhen>
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <command
+               commandId="pickerexplorer.ui.commands.addtopickerexplorer"
+               label="Add to Picker Explorer"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <command
+               commandId="pickerexplorer.ui.commands.showallreferences"
+               label="Show all references"
+               style="push">
+            <visibleWhen
+                  checkEnabled="true">
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+  <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="org.topcased.pickerexplorer.ui.util.AdaptableToEObjectPropertyTester"
+            id="pickerexplorer.ui"
+            namespace="pickerexplorer.ui"
+            properties="isAdaptableToEObject"
+            type="org.eclipse.jface.viewers.IStructuredSelection">
+      </propertyTester>
+   </extension>
+  <extension
+        point="org.topcased.iterators.configurations.registeredConfiguration">
+     <Configuration
+           iteratorFile="configuration/configuration.iterator">
+     </Configuration>
+  </extension>
+  <extension
+        point="org.topcased.iterators.configurations.javaQuery">
+     <javaQuery
+           queryClass="org.topcased.pickerexplorer.ui.javaqueries.ContentsQuery"
+           queryId="contentsquery">
+     </javaQuery>
+  </extension>
+  <!--<extension
+        point="org.topcased.iterators.configurations.javaQuery">
+     <javaQuery
+           queryClass="org.topcased.pickerexplorer.ui.javaqueries.MQ2InverseReferencesQuery"
+           queryId="mq2inversereferencesquery">
+     </javaQuery>
+  </extension>-->
+  <extension
+        point="org.topcased.pickerexplorer.ui.settransformer">
+     <setTransformer
+           setTransformerClass="org.topcased.pickerexplorer.ui.settransform.ContainerTransformer"
+           setTransformerId="containerSetTransformer">
+     </setTransformer>
+  </extension>
+
+</plugin>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+<copyright>
+Copyright (c) 2014 Atos.
+
+     
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+</copyright>
+
+ $Id$
+-->
+
+<plugin>
+   <extension
+         point="org.topcased.iterators.configurations.registeredConfiguration">
+      <Configuration
+            iteratorFile="configuration/configuration.iterator">
+      </Configuration>
+   </extension>
+  <extension
+        point="org.topcased.iterators.configurations.javaQuery">
+     <javaQuery
+           queryClass="org.topcased.pickerexplorer.ui.pickers.javaqueries.InverseReferencesQuery"
+           queryId="inversereferencesquery">
+     </javaQuery>
+  </extension>
+  <extension
+        point="org.topcased.iterators.configurations.javaQuery">
+     <javaQuery
+           queryClass="org.topcased.pickerexplorer.ui.pickers.javaqueries.OCLQuery"
+           queryId="oclquery">
+     </javaQuery>
+  </extension>
+  <extension
+        point="org.topcased.iterators.configurations.javaQuery">
+     <javaQuery
+           queryClass="org.topcased.pickerexplorer.ui.pickers.javaqueries.OutgoingReferencesQuery"
+           queryId="outgoingreferencesquery">
+     </javaQuery>
+  </extension>
+  <extension
+        point="org.topcased.iterators.configurations.javaQuery">
+     <javaQuery
+           queryClass="org.topcased.pickerexplorer.ui.pickers.javaqueries.ReferencingEntitiesQuery"
+           queryId="referencingentitiesquery">
+     </javaQuery>
+  </extension>
+  <!--<extension
+        point="org.topcased.iterators.configurations.javaQuery">
+     <javaQuery
+           queryClass="org.topcased.pickerexplorer.ui.pickers.javaqueries.MQ2InverseReferencesQuery"
+           queryId="mq2inversereferencesquery">
+     </javaQuery>
+  </extension>-->
+  <extension
+        point="org.topcased.pickerexplorer.ui.settransformer">
+     <setTransformer
+           setTransformerClass="org.topcased.pickerexplorer.ui.pickers.settransform.ContainerTransformer"
+           setTransformerId="containerSetTransformer">
+     </setTransformer>
+  </extension>
+</plugin>

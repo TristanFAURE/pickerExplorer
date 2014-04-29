@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pickerbatch:PickerBatchMappings xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:pickerbatch="http://www.topcased.org/pickerbatch/1.0">
+  <mappings>
+    <eObject href="file:/D:/documents/A167026/runtime-EclipseApplication/A400M/Specification/BAF/BAF_SRD.uml#_3E26C13A00CB3EE6F8C202AD"/>
+    <pickers pickerId="Use Cases Not Covered"/>
+  </mappings>
+</pickerbatch:PickerBatchMappings>

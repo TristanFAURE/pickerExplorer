@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pickerbatch:PickerBatchMappings xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pickerbatch="http://www.topcased.org/pickerbatch/1.0" xsi:schemaLocation="http://www.topcased.org/pickerbatch/1.0 pickerbatch.ecore">
+  <mappings>
+    <eObject href="pickerbatch.ecore#//Picker/pickerId/@eGenericType"/>
+    <pickers pickerId="contentsquery"/>
+    <pickers pickerId="oclquery"/>
+  </mappings>
+</pickerbatch:PickerBatchMappings>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pickerbatch:PickerBatchMappings xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:pickerbatch="http://www.topcased.org/pickerbatch/1.0">
+  <mappings>
+    <eObject href="file:/D:/documents/A167026/runtime-EclipseApplication/A400M/CMS.uml#3E26C13A00CB"/>
+    <pickers pickerId="Contents"/>
+  </mappings>
+</pickerbatch:PickerBatchMappings>

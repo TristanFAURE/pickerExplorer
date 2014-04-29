@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+<copyright>
+Copyright (c) 2014 Atos.
+
+     
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+</copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="http://www.topcased.org/pickerbatch/1.0"
+            class="org.topcased.pickerexplorer.batch.pickerbatch.provider.PickerbatchItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.topcased.org/pickerbatch/1.0"
+            class="org.topcased.pickerexplorer.batch.pickerbatch.PickerbatchPackage"
+            genModel="model/pickerbatch.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.topcased.pickerexplorer.batch.pickerbatch.presentation.PickerbatchModelWizardID"
+            name="%_UI_PickerbatchModelWizard_label"
+            class="org.topcased.pickerexplorer.batch.pickerbatch.presentation.PickerbatchModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PickerbatchModelFile.gif">
+         <description>%_UI_PickerbatchModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.topcased.pickerexplorer.batch.pickerbatch.presentation.PickerbatchEditorID"
+            name="%_UI_PickerbatchEditor_label"
+            icon="icons/full/obj16/PickerbatchModelFile.gif"
+            extensions="pickerbatch"
+            class="org.topcased.pickerexplorer.batch.pickerbatch.presentation.PickerbatchEditor"
+            contributorClass="org.topcased.pickerexplorer.batch.pickerbatch.presentation.PickerbatchActionBarContributor">
+      </editor>
+   </extension>
+   <extension
+         id="pickerexplorerbatchmode"
+         name="Picker Explorer Batch Mode"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="org.topcased.pickerexplorer.batch.application.PickerExplorerBatchMode">
+         </run>
+      </application>
+   </extension>
+
+</plugin>

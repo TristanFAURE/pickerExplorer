@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Pickers
+Bundle-SymbolicName: org.topcased.pickerexplorer.ui.pickers;singleton:=true
+Bundle-Version: 0.0.1.qualifier
+Bundle-Activator: org.topcased.pickerexplorer.ui.pickers.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.edit;bundle-version="2.7.2",
+ org.topcased.pickerexplorer.ui,
+ org.topcased.ocl.evaluation;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.topcased.pickerexplorer.ui.pickers.javaqueries

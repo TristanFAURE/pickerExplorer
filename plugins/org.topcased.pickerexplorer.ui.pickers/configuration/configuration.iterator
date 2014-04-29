@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iterator:ConfigurationModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:iterator="http://www.topcased.org/1.0.0/iterator/">
+  <pickerSets>
+    <pickers name="Inverse References" description="Use an ECrossReferenceAdapter to retrieve the non-navigable inverse references of an EObject">
+      <registeredQueries xsi:type="iterator:JavaQuery" javaid="inversereferencesquery"/>
+    </pickers>
+    <pickers name="OCL" description="Execute an OCL query on an EObject">
+      <registeredQueries xsi:type="iterator:JavaQuery" javaid="oclquery"/>
+    </pickers>
+    <pickers name="Outgoing References" description="Retrieve the outgoing references of an EObject. The name of the reference can be specified">
+      <registeredQueries xsi:type="iterator:JavaQuery" javaid="outgoingreferencesquery"/>
+    </pickers>
+    <pickers name="Referencing Entities" description="The same as Inverse References, except it returns more semantic elements">
+      <registeredQueries xsi:type="iterator:JavaQuery" javaid="referencingentitiesquery"/>
+    </pickers>
+  </pickerSets>
+</iterator:ConfigurationModel>
